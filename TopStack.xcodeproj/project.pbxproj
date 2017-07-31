@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		10009DAC1F2F5A5200C37B0B /* StackUsersResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10009DAB1F2F5A5200C37B0B /* StackUsersResult.swift */; };
+		10009DAE1F2F770B00C37B0B /* UsersListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10009DAD1F2F770B00C37B0B /* UsersListViewControllerTests.swift */; };
 		109258B81F2F3405003B9B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258B71F2F3405003B9B7B /* AppDelegate.swift */; };
 		109258BD1F2F3405003B9B7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109258BB1F2F3405003B9B7B /* Main.storyboard */; };
 		109258BF1F2F3405003B9B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 109258BE1F2F3405003B9B7B /* Assets.xcassets */; };
 		109258C21F2F3405003B9B7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109258C01F2F3405003B9B7B /* LaunchScreen.storyboard */; };
-		109258CD1F2F3405003B9B7B /* TopStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258CC1F2F3405003B9B7B /* TopStackTests.swift */; };
 		109258DC1F2F3728003B9B7B /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258DB1F2F3728003B9B7B /* UserTableViewCell.swift */; };
 		109258E11F2F390A003B9B7B /* StackUsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258E01F2F390A003B9B7B /* StackUsersAPI.swift */; };
 		109258E41F2F391C003B9B7B /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258E31F2F391C003B9B7B /* JSONParser.swift */; };
@@ -36,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		10009DAB1F2F5A5200C37B0B /* StackUsersResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackUsersResult.swift; sourceTree = "<group>"; };
+		10009DAD1F2F770B00C37B0B /* UsersListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersListViewControllerTests.swift; sourceTree = "<group>"; };
 		109258B41F2F3405003B9B7B /* TopStack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopStack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		109258B71F2F3405003B9B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		109258BC1F2F3405003B9B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		109258C11F2F3405003B9B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		109258C31F2F3405003B9B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		109258C81F2F3405003B9B7B /* TopStackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopStackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		109258CC1F2F3405003B9B7B /* TopStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStackTests.swift; sourceTree = "<group>"; };
 		109258CE1F2F3405003B9B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		109258DB1F2F3728003B9B7B /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		109258E01F2F390A003B9B7B /* StackUsersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackUsersAPI.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		109258CB1F2F3405003B9B7B /* TopStackTests */ = {
 			isa = PBXGroup;
 			children = (
-				109258CC1F2F3405003B9B7B /* TopStackTests.swift */,
+				10009DAD1F2F770B00C37B0B /* UsersListViewControllerTests.swift */,
 				109258CE1F2F3405003B9B7B /* Info.plist */,
 			);
 			path = TopStackTests;
@@ -349,7 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				109258CD1F2F3405003B9B7B /* TopStackTests.swift in Sources */,
+				10009DAE1F2F770B00C37B0B /* UsersListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
