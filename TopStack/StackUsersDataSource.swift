@@ -17,9 +17,10 @@ protocol UsersDataSource: class, UITableViewDataSource, UITableViewDelegate {
 
 class StackUsersDataSource: NSObject, UsersDataSource {
 	
+	// MARK: - Properties
+	
 	let apiService: UsersAPIService
 	weak var tableView: UITableView?
-	
 	private(set) var users: [User] = []
 	private(set) var isInErrorState = false
 	

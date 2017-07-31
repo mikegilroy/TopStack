@@ -26,6 +26,8 @@ class StackUsersDataSourceTests: XCTestCase {
         super.tearDown()
     }
 	
+
+	// MARK: - Tests
 	
 	func test_Init_SetsAPIService() {
 		XCTAssert(dataSource.apiService as? MockAPIService === mockAPIService)

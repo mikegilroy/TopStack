@@ -29,6 +29,8 @@ class UsersListViewControllerTests: XCTestCase {
     }
 	
 	
+	// MARK: - Tests
+	
 	func test_ViewDidLoad_UsersDataSourceNotNil() {
 		XCTAssertNotNil(controller.usersDataSource)
 	}

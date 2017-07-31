@@ -23,7 +23,7 @@ class StackUsersAPI: UsersAPIService {
 	let parser: DataParser
 	
 	
-	// Initialisation
+	// MARK: - Initialisation
 	
 	convenience init() {
 		self.init(requestHandler: NetworkManager(), parser: JSONParser())

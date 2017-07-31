@@ -10,7 +10,7 @@ import UIKit
 
 class UsersListViewController: UIViewController {
 
-	// MARK: - Propertis
+	// MARK: - Properties
 	
 	var usersDataSource: StackUsersDataSource?
 	
