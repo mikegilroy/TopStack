@@ -8,16 +8,19 @@
 
 import Foundation
 
-protocol DataParser {
-	
-	func dictionary(from data: Any) -> [String: Any]?
+
+protocol JSONInitialisable {
+	init?(json: [String: Any])
 }
 
+protocol DataParser {
+	func dictionary(from data: Any?) -> [String: Any]?
+}
 
 struct JSONParser: DataParser {
 	
 	/// Returns an dictionary from data given in JSON format. If JSON serlialization fails then nil will be returned.
-	func dictionary(from data: Any) -> [String: Any]? {
+	func dictionary(from data: Any?) -> [String: Any]? {
 		guard let data = data as? Data else {
 			return nil
 		}
