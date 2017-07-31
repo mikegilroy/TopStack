@@ -24,6 +24,7 @@ class UsersListViewController: UIViewController {
 	// MARK: - Actions
 	
 	@IBAction func reloadTapped(_ sender: Any) {
+		reloadButton.isEnabled = false
 		loadUsers()
 	}
 	
@@ -48,6 +49,7 @@ class UsersListViewController: UIViewController {
 		usersDataSource?.loadUsers { [weak self] in
 			self?.tableView.isHidden = false
 			self?.activityIndicator.stopAnimating()
+			self?.reloadButton.isEnabled = true
 		}
 	}
 }
