@@ -9,7 +9,7 @@
 import Foundation
 
 protocol UsersAPIService {
-	var networkHandler: NetworkHandler { get }
+	var requestHandler: HTTPHandler { get }
 	var parser: DataParser { get }
 	func fetchUsers(maxCount: Int, completion: @escaping ([User]?, Error?) -> Void)
 }
@@ -18,15 +18,15 @@ class StackUsersAPI: UsersAPIService {
 	
 	private let baseURL = "http://api.stackexchange.com/2.2/users?order=desc&sort=reputation&site=stackoverflow"
 	
-	let networkHandler: NetworkHandler
+	let requestHandler: HTTPHandler
 	let parser: DataParser
 	
 	convenience init() {
-		self.init(networkHandler: NetworkManager(), parser: JSONParser())
+		self.init(requestHandler: NetworkManager(), parser: JSONParser())
 	}
 	
-	init(networkHandler: NetworkHandler, parser: DataParser) {
-		self.networkHandler = networkHandler
+	init(requestHandler: HTTPHandler, parser: DataParser) {
+		self.requestHandler = requestHandler
 		self.parser = parser
 	}
 	
@@ -38,7 +38,7 @@ class StackUsersAPI: UsersAPIService {
 			return
 		}
 		
-		networkHandler.getData(url: url) { [unowned self] (data, error) in
+		requestHandler.getData(url: url) { [unowned self] (data, error) in
 			guard error == nil,
 				let data = data else {
 				completion(nil, error)
