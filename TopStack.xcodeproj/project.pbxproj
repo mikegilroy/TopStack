@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		10009DAC1F2F5A5200C37B0B /* StackUsersResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10009DAB1F2F5A5200C37B0B /* StackUsersResult.swift */; };
 		10009DAE1F2F770B00C37B0B /* UsersListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10009DAD1F2F770B00C37B0B /* UsersListViewControllerTests.swift */; };
+		10009DB01F2F840000C37B0B /* StackUsersDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10009DAF1F2F840000C37B0B /* StackUsersDataSourceTests.swift */; };
 		109258B81F2F3405003B9B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258B71F2F3405003B9B7B /* AppDelegate.swift */; };
 		109258BD1F2F3405003B9B7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109258BB1F2F3405003B9B7B /* Main.storyboard */; };
 		109258BF1F2F3405003B9B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 109258BE1F2F3405003B9B7B /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		10009DAB1F2F5A5200C37B0B /* StackUsersResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackUsersResult.swift; sourceTree = "<group>"; };
 		10009DAD1F2F770B00C37B0B /* UsersListViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersListViewControllerTests.swift; sourceTree = "<group>"; };
+		10009DAF1F2F840000C37B0B /* StackUsersDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackUsersDataSourceTests.swift; sourceTree = "<group>"; };
 		109258B41F2F3405003B9B7B /* TopStack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopStack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		109258B71F2F3405003B9B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		109258BC1F2F3405003B9B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				10009DAD1F2F770B00C37B0B /* UsersListViewControllerTests.swift */,
+				10009DAF1F2F840000C37B0B /* StackUsersDataSourceTests.swift */,
 				109258CE1F2F3405003B9B7B /* Info.plist */,
 			);
 			path = TopStackTests;
@@ -349,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10009DB01F2F840000C37B0B /* StackUsersDataSourceTests.swift in Sources */,
 				10009DAE1F2F770B00C37B0B /* UsersListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
