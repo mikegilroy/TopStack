@@ -93,6 +93,7 @@
 				109258BB1F2F3405003B9B7B /* Main.storyboard */,
 				109258DD1F2F3804003B9B7B /* Views */,
 				109258E71F2F393D003B9B7B /* Model */,
+				109258EC1F2F4208003B9B7B /* API */,
 				109258E21F2F390F003B9B7B /* Networking */,
 				109258BE1F2F3405003B9B7B /* Assets.xcassets */,
 				109258C01F2F3405003B9B7B /* LaunchScreen.storyboard */,
@@ -122,7 +123,6 @@
 		109258E21F2F390F003B9B7B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				109258E01F2F390A003B9B7B /* StackUsersAPI.swift */,
 				109258EA1F2F41CB003B9B7B /* NetworkManager.swift */,
 				109258E31F2F391C003B9B7B /* JSONParser.swift */,
 			);
@@ -136,6 +136,14 @@
 				109258E51F2F3938003B9B7B /* StackUser.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		109258EC1F2F4208003B9B7B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				109258E01F2F390A003B9B7B /* StackUsersAPI.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
