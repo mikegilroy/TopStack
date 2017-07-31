@@ -16,15 +16,15 @@ class UsersListViewController: UIViewController {
 	
 	// MARK: - Outlets
 	
-	@IBOutlet weak var tableView: UITableView!
-	@IBOutlet weak var reloadButton: UIBarButtonItem!
-	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+	@IBOutlet weak var tableView: UITableView?
+	@IBOutlet weak var reloadButton: UIBarButtonItem?
+	@IBOutlet weak var activityIndicator: UIActivityIndicatorView?
 	
 	
 	// MARK: - Actions
 	
 	@IBAction func reloadTapped(_ sender: Any) {
-		reloadButton.isEnabled = false
+		reloadButton?.isEnabled = false
 		loadUsers()
 	}
 	
@@ -34,22 +34,24 @@ class UsersListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		tableView.tableFooterView = UIView(frame: .zero)
-		usersDataSource = StackUsersDataSource(apiService: StackUsersAPI(), tableView: self.tableView)
+		tableView?.tableFooterView = UIView(frame: .zero)
+		usersDataSource = StackUsersDataSource(apiService: StackUsersAPI(),
+		                                       tableView: self.tableView ?? UITableView())
 		loadUsers()
     }
 	
 	
 	// MARK: - Load Users
 	
-	func loadUsers() {
-		activityIndicator.startAnimating()
-		tableView.isHidden = true
+	func loadUsers(completion: (() -> Void)? = nil) {
+		activityIndicator?.startAnimating()
+		tableView?.isHidden = true
 		
 		usersDataSource?.loadUsers { [weak self] in
-			self?.tableView.isHidden = false
-			self?.activityIndicator.stopAnimating()
-			self?.reloadButton.isEnabled = true
+			self?.tableView?.isHidden = false
+			self?.activityIndicator?.stopAnimating()
+			self?.reloadButton?.isEnabled = true
+			completion?()
 		}
 	}
 }
