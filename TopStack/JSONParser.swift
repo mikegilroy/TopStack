@@ -7,3 +7,27 @@
 //
 
 import Foundation
+
+protocol DataParser {
+	
+	func dictionary(from data: Any) -> [String: Any]?
+}
+
+
+struct JSONParser: DataParser {
+	
+	/// Returns an dictionary from data given in JSON format. If JSON serlialization fails then nil will be returned.
+	func dictionary(from data: Any) -> [String: Any]? {
+		guard let data = data as? Data else {
+			return nil
+		}
+		
+		do {
+			return (try JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any]
+		} catch {
+			print("Error serializing json")
+			return nil
+		}
+	}
+}
+
