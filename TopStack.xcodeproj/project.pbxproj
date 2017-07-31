@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10009DAC1F2F5A5200C37B0B /* StackUsersResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10009DAB1F2F5A5200C37B0B /* StackUsersResult.swift */; };
 		109258B81F2F3405003B9B7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258B71F2F3405003B9B7B /* AppDelegate.swift */; };
 		109258BD1F2F3405003B9B7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109258BB1F2F3405003B9B7B /* Main.storyboard */; };
 		109258BF1F2F3405003B9B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 109258BE1F2F3405003B9B7B /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10009DAB1F2F5A5200C37B0B /* StackUsersResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackUsersResult.swift; sourceTree = "<group>"; };
 		109258B41F2F3405003B9B7B /* TopStack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopStack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		109258B71F2F3405003B9B7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		109258BC1F2F3405003B9B7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				109258E81F2F395E003B9B7B /* StackUsersDataSource.swift */,
 				109258E51F2F3938003B9B7B /* StackUser.swift */,
+				10009DAB1F2F5A5200C37B0B /* StackUsersResult.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				109258E41F2F391C003B9B7B /* JSONParser.swift in Sources */,
 				109258B81F2F3405003B9B7B /* AppDelegate.swift in Sources */,
 				109258DC1F2F3728003B9B7B /* UserTableViewCell.swift in Sources */,
+				10009DAC1F2F5A5200C37B0B /* StackUsersResult.swift in Sources */,
 				109258EB1F2F41CB003B9B7B /* NetworkManager.swift in Sources */,
 				109258F01F2F4744003B9B7B /* UsersListViewController.swift in Sources */,
 				109258E91F2F395E003B9B7B /* StackUsersDataSource.swift in Sources */,
