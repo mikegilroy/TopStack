@@ -20,4 +20,10 @@ class UserTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
 
+	
+	func configure(with user: User) {
+		userNameLabel.text = user.displayName
+		userReputationLabel.text = "\(user.reputation)"
+	}
+	
 }
