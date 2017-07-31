@@ -19,6 +19,7 @@
 		109258E61F2F3938003B9B7B /* StackUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258E51F2F3938003B9B7B /* StackUser.swift */; };
 		109258E91F2F395E003B9B7B /* StackUsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258E81F2F395E003B9B7B /* StackUsersDataSource.swift */; };
 		109258EB1F2F41CB003B9B7B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258EA1F2F41CB003B9B7B /* NetworkManager.swift */; };
+		109258EE1F2F44BD003B9B7B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 109258ED1F2F44BD003B9B7B /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		109258E51F2F3938003B9B7B /* StackUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackUser.swift; sourceTree = "<group>"; };
 		109258E81F2F395E003B9B7B /* StackUsersDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackUsersDataSource.swift; sourceTree = "<group>"; };
 		109258EA1F2F41CB003B9B7B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		109258ED1F2F44BD003B9B7B /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				109258B61F2F3405003B9B7B /* TopStack */,
 				109258CB1F2F3405003B9B7B /* TopStackTests */,
 				109258B51F2F3405003B9B7B /* Products */,
+				109258ED1F2F44BD003B9B7B /* Podfile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,6 +236,7 @@
 			files = (
 				109258C21F2F3405003B9B7B /* LaunchScreen.storyboard in Resources */,
 				109258BF1F2F3405003B9B7B /* Assets.xcassets in Resources */,
+				109258EE1F2F44BD003B9B7B /* Podfile in Resources */,
 				109258BD1F2F3405003B9B7B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
