@@ -10,11 +10,15 @@ import UIKit
 
 class UsersListViewController: UIViewController {
 
+	// MARK: - Propertis
+	
+	var usersDataSource: StackUsersDataSource?
+	
 	// MARK: - Outlets
 	
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var reloadButton: UIBarButtonItem!
-	@IBOutlet var usersDataSource: StackUsersDataSource!
+	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 	
 	
 	// MARK: - Actions
@@ -29,13 +33,21 @@ class UsersListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		tableView.tableFooterView = UIView(frame: .zero)
 		usersDataSource = StackUsersDataSource(apiService: StackUsersAPI(), tableView: self.tableView)
+		loadUsers()
     }
 	
 	
 	// MARK: - Load Users
 	
 	func loadUsers() {
-		usersDataSource.loadUsers(maxCount: 20)
+		activityIndicator.startAnimating()
+		tableView.isHidden = true
+		
+		usersDataSource?.loadUsers { [weak self] in
+			self?.tableView.isHidden = false
+			self?.activityIndicator.stopAnimating()
+		}
 	}
 }
