@@ -38,14 +38,14 @@ class StackUsersAPI: UsersAPIService {
 			return
 		}
 		
-		requestHandler.getData(url: url) { [unowned self] (data, error) in
+		requestHandler.getData(url: url) { [weak self] (data, error) in
 			guard error == nil,
 				let data = data else {
 				completion(nil, error)
 				return
 			}
 			
-			if let json = self.parser.dictionary(from: data),
+			if let json = self?.parser.dictionary(from: data),
 				let userResult = StackUsersResult(json: json) {
 				completion(userResult.items, nil)
 			} else {

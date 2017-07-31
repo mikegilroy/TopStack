@@ -42,17 +42,17 @@ class StackUsersDataSource: NSObject, UsersDataSource {
 	// MARK: - Load Users
 	
 	func loadUsers(maxCount: Int = 20, completion: (() -> Void)? = nil) {
-		apiService.fetchUsers(maxCount: maxCount) { [unowned self] (users, error) in
+		apiService.fetchUsers(maxCount: maxCount) { [weak self] (users, error) in
 			guard error == nil else {
-				self.isInErrorState = true
-				self.reloadTableView()
+				self?.isInErrorState = true
+				self?.reloadTableView()
 				completion?()
 				return
 			}
 			
-			self.isInErrorState = false
-			self.users = users ?? []
-			self.reloadTableView()
+			self?.isInErrorState = false
+			self?.users = users ?? []
+			self?.reloadTableView()
 			completion?()
 		}
 	}
