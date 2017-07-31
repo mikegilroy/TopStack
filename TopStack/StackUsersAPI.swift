@@ -16,7 +16,7 @@ protocol UsersAPIService {
 
 class StackUsersAPI: UsersAPIService {
 	
-	private let baseURL = "http://api.stackexchange.com/2.2/users?pagesize=20&order=desc&sort=reputation&site=stackoverflow"
+	private let baseURL = "http://api.stackexchange.com/2.2/users?order=desc&sort=reputation&site=stackoverflow"
 	
 	let networkHandler: NetworkHandler
 	let parser: DataParser
@@ -33,7 +33,7 @@ class StackUsersAPI: UsersAPIService {
 	
 	func fetchUsers(maxCount: Int, completion: @escaping ([User]?, Error?) -> Void) {
 		
-		guard let url = URL(string: baseURL) else {
+		guard let url = URL(string: baseURL + "&pagesize=\(maxCount)") else {
 			completion(nil, nil)
 			return
 		}
@@ -46,14 +46,13 @@ class StackUsersAPI: UsersAPIService {
 			}
 			
 			
-			if let dictionary = self.parser.dictionary(from: data) {
-				// Instantiate users
-				completion([], nil)
+			if let json = self.parser.dictionary(from: data),
+				let userResult = StackUsersResult(json: json) {
+				completion(userResult.items, nil)
 			} else {
 				completion(nil, nil)
 			}
 		}
-		
 	}
 	
 }
