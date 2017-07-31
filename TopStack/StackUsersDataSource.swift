@@ -31,12 +31,17 @@ class StackUsersDataSource: NSObject, UsersDataSource {
 		self.apiService = apiService
 		self.tableView = tableView
 		super.init()
+		
+		// Configure tableview delegate, datasource & estimated cell height
+		self.tableView?.delegate = self
+		self.tableView?.dataSource = self
+		self.tableView?.estimatedRowHeight = 100
 	}
 	
 	
 	// MARK: - Load Users
 	
-	func loadUsers(maxCount: Int, completion: (() -> Void)? = nil) {
+	func loadUsers(maxCount: Int = 20, completion: (() -> Void)? = nil) {
 		apiService.fetchUsers(maxCount: maxCount) { [unowned self] (users, error) in
 			guard error == nil else {
 				self.isInErrorState = true
@@ -45,6 +50,7 @@ class StackUsersDataSource: NSObject, UsersDataSource {
 				return
 			}
 			
+			self.isInErrorState = false
 			self.users = users ?? []
 			self.reloadTableView()
 			completion?()
@@ -74,10 +80,18 @@ extension StackUsersDataSource {
 		if isInErrorState {
 			return tableView.dequeueReusableCell(withIdentifier: "error_cell")!
 		} else {
-			let cell = tableView.dequeueReusableCell(withIdentifier: "user_cell", for: indexPath)
+			let cell = tableView.dequeueReusableCell(withIdentifier: "user_cell", for: indexPath) as! UserTableViewCell
 			let user = users[indexPath.row]
-			// Config cell with user 
+			cell.configure(with: user)
 			return cell
 		}
+	}
+}
+
+// MARK: - UITableViewDelegate
+extension StackUsersDataSource {
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return UITableViewAutomaticDimension
 	}
 }
