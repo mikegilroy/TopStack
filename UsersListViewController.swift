@@ -14,12 +14,13 @@ class UsersListViewController: UIViewController {
 	
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var reloadButton: UIBarButtonItem!
+	@IBOutlet var usersDataSource: StackUsersDataSource!
 	
 	
 	// MARK: - Actions
 	
 	@IBAction func reloadTapped(_ sender: Any) {
-		
+		loadUsers()
 	}
 	
 	
@@ -27,7 +28,14 @@ class UsersListViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		usersDataSource = StackUsersDataSource(apiService: StackUsersAPI(), tableView: self.tableView)
     }
 	
-
+	
+	// MARK: - Load Users
+	
+	func loadUsers() {
+		usersDataSource.loadUsers(maxCount: 20)
+	}
 }

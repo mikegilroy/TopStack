@@ -103,8 +103,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="NgK-lz-mJj"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3pL-TK-PTR"/>
+                                    <outlet property="dataSource" destination="Vfb-uG-Krk" id="Ar0-9e-UaL"/>
+                                    <outlet property="delegate" destination="Vfb-uG-Krk" id="hzm-Th-Cps"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -126,9 +126,11 @@
                     <connections>
                         <outlet property="reloadButton" destination="1lb-bR-SqE" id="eBv-rI-Gnc"/>
                         <outlet property="tableView" destination="FUy-aY-AXW" id="9KK-SW-ePp"/>
+                        <outlet property="usersDataSource" destination="Vfb-uG-Krk" id="Led-l6-wED"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="Vfb-uG-Krk" customClass="StackUsersDataSource" customModule="TopStack" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
         </scene>

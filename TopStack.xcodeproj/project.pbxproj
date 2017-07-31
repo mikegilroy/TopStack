@@ -14,6 +14,10 @@
 		109258CD1F2F3405003B9B7B /* TopStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258CC1F2F3405003B9B7B /* TopStackTests.swift */; };
 		109258DA1F2F34EF003B9B7B /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258D91F2F34EF003B9B7B /* UsersListViewController.swift */; };
 		109258DC1F2F3728003B9B7B /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258DB1F2F3728003B9B7B /* UserTableViewCell.swift */; };
+		109258E11F2F390A003B9B7B /* StackUsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258E01F2F390A003B9B7B /* StackUsersAPI.swift */; };
+		109258E41F2F391C003B9B7B /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258E31F2F391C003B9B7B /* JSONParser.swift */; };
+		109258E61F2F3938003B9B7B /* StackUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258E51F2F3938003B9B7B /* StackUser.swift */; };
+		109258E91F2F395E003B9B7B /* StackUsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258E81F2F395E003B9B7B /* StackUsersDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,10 @@
 		109258CE1F2F3405003B9B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		109258D91F2F34EF003B9B7B /* UsersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsersListViewController.swift; path = ../UsersListViewController.swift; sourceTree = "<group>"; };
 		109258DB1F2F3728003B9B7B /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		109258E01F2F390A003B9B7B /* StackUsersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackUsersAPI.swift; sourceTree = "<group>"; };
+		109258E31F2F391C003B9B7B /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		109258E51F2F3938003B9B7B /* StackUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackUser.swift; sourceTree = "<group>"; };
+		109258E81F2F395E003B9B7B /* StackUsersDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackUsersDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,8 @@
 				109258B71F2F3405003B9B7B /* AppDelegate.swift */,
 				109258BB1F2F3405003B9B7B /* Main.storyboard */,
 				109258DD1F2F3804003B9B7B /* Views */,
+				109258E71F2F393D003B9B7B /* Model */,
+				109258E21F2F390F003B9B7B /* Networking */,
 				109258BE1F2F3405003B9B7B /* Assets.xcassets */,
 				109258C01F2F3405003B9B7B /* LaunchScreen.storyboard */,
 				109258C31F2F3405003B9B7B /* Info.plist */,
@@ -105,6 +115,24 @@
 				109258DB1F2F3728003B9B7B /* UserTableViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		109258E21F2F390F003B9B7B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				109258E01F2F390A003B9B7B /* StackUsersAPI.swift */,
+				109258E31F2F391C003B9B7B /* JSONParser.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		109258E71F2F393D003B9B7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				109258E81F2F395E003B9B7B /* StackUsersDataSource.swift */,
+				109258E51F2F3938003B9B7B /* StackUser.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,9 +240,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				109258E11F2F390A003B9B7B /* StackUsersAPI.swift in Sources */,
+				109258E41F2F391C003B9B7B /* JSONParser.swift in Sources */,
 				109258B81F2F3405003B9B7B /* AppDelegate.swift in Sources */,
 				109258DC1F2F3728003B9B7B /* UserTableViewCell.swift in Sources */,
 				109258DA1F2F34EF003B9B7B /* UsersListViewController.swift in Sources */,
+				109258E91F2F395E003B9B7B /* StackUsersDataSource.swift in Sources */,
+				109258E61F2F3938003B9B7B /* StackUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
