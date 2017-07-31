@@ -10,11 +10,15 @@ import Foundation
 import Alamofire
 import UIKit
 
-protocol NetworkHandler {
+protocol HTTPHandler {
 	func getData(url: URL?, completion: @escaping (Any?, Error?) -> Void)
 }
 
-struct NetworkManager: NetworkHandler {
+protocol ImageLoader {
+	func getImage(url: URL?, completion: @escaping (UIImage?) -> Void)
+}
+
+struct NetworkManager: HTTPHandler, ImageLoader {
 	
 	func getData(url: URL?, completion: @escaping (Any?, Error?) -> Void) {
 		

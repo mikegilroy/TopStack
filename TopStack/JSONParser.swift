@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 protocol JSONInitialisable {
 	init?(json: [String: Any])
 }
