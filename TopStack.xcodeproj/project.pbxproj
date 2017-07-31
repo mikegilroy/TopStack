@@ -20,6 +20,7 @@
 		109258E91F2F395E003B9B7B /* StackUsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258E81F2F395E003B9B7B /* StackUsersDataSource.swift */; };
 		109258EB1F2F41CB003B9B7B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258EA1F2F41CB003B9B7B /* NetworkManager.swift */; };
 		109258EE1F2F44BD003B9B7B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 109258ED1F2F44BD003B9B7B /* Podfile */; };
+		D651B95AAEE358A303148DD5 /* Pods_TopStack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48450689583D3EAE6DE2AEC /* Pods_TopStack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,9 @@
 		109258E81F2F395E003B9B7B /* StackUsersDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackUsersDataSource.swift; sourceTree = "<group>"; };
 		109258EA1F2F41CB003B9B7B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		109258ED1F2F44BD003B9B7B /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; };
+		3F91EC1703846956F4C821C5 /* Pods-TopStack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopStack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopStack/Pods-TopStack.debug.xcconfig"; sourceTree = "<group>"; };
+		B48450689583D3EAE6DE2AEC /* Pods_TopStack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopStack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E55B32917A93D90AAF080582 /* Pods-TopStack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopStack.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopStack/Pods-TopStack.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D651B95AAEE358A303148DD5 /* Pods_TopStack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,8 @@
 				109258CB1F2F3405003B9B7B /* TopStackTests */,
 				109258B51F2F3405003B9B7B /* Products */,
 				109258ED1F2F44BD003B9B7B /* Podfile */,
+				6F3A9F823533398D3D784408 /* Pods */,
+				236BA70D3454428E6C4E8C66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +156,23 @@
 			name = API;
 			sourceTree = "<group>";
 		};
+		236BA70D3454428E6C4E8C66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B48450689583D3EAE6DE2AEC /* Pods_TopStack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F3A9F823533398D3D784408 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F91EC1703846956F4C821C5 /* Pods-TopStack.debug.xcconfig */,
+				E55B32917A93D90AAF080582 /* Pods-TopStack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 109258D11F2F3405003B9B7B /* Build configuration list for PBXNativeTarget "TopStack" */;
 			buildPhases = (
+				8E2140B8D5EC18207EA95694 /* [CP] Check Pods Manifest.lock */,
 				109258B01F2F3405003B9B7B /* Sources */,
 				109258B11F2F3405003B9B7B /* Frameworks */,
 				109258B21F2F3405003B9B7B /* Resources */,
+				3A47FBC77739F4BCE49267F8 /* [CP] Embed Pods Frameworks */,
+				D669D6B80F03F9A5627780A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +276,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A47FBC77739F4BCE49267F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TopStack/Pods-TopStack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E2140B8D5EC18207EA95694 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D669D6B80F03F9A5627780A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TopStack/Pods-TopStack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		109258B01F2F3405003B9B7B /* Sources */ = {
@@ -399,6 +474,7 @@
 		};
 		109258D21F2F3405003B9B7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F91EC1703846956F4C821C5 /* Pods-TopStack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MXD8E5FVZ4;
@@ -412,6 +488,7 @@
 		};
 		109258D31F2F3405003B9B7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E55B32917A93D90AAF080582 /* Pods-TopStack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MXD8E5FVZ4;
