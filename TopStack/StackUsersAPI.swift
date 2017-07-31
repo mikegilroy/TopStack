@@ -14,12 +14,16 @@ protocol UsersAPIService {
 	func fetchUsers(maxCount: Int, completion: @escaping ([User]?, Error?) -> Void)
 }
 
+
 class StackUsersAPI: UsersAPIService {
 	
 	private let baseURL = "http://api.stackexchange.com/2.2/users?order=desc&sort=reputation&site=stackoverflow"
 	
 	let requestHandler: HTTPHandler
 	let parser: DataParser
+	
+	
+	// Initialisation
 	
 	convenience init() {
 		self.init(requestHandler: NetworkManager(), parser: JSONParser())
@@ -30,6 +34,8 @@ class StackUsersAPI: UsersAPIService {
 		self.parser = parser
 	}
 	
+	
+	// MARK: - Fetch Users
 	
 	func fetchUsers(maxCount: Int, completion: @escaping ([User]?, Error?) -> Void) {
 		

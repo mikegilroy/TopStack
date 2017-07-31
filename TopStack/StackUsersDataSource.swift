@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 protocol UsersDataSource: class, UITableViewDataSource, UITableViewDelegate {
-	
 	var apiService: UsersAPIService { get }
 	var tableView: UITableView? { get set }
 	func loadUsers(maxCount: Int, completion: (() -> Void)?)

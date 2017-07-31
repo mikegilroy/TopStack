@@ -18,6 +18,9 @@ struct StackUsersResult: UsersResult {
 	
 	let items: [User]
 	
+	
+	// MARK: Initialisation
+	
 	init?(json: [String: Any]) {
 		guard let items = json[kItems] as? [[String: Any]] else {
 			return nil
