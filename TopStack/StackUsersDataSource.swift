@@ -22,6 +22,10 @@ class StackUsersDataSource: NSObject, UsersDataSource {
 	weak var tableView: UITableView?
 	
 	var users: [User] = []
+	var isInErrorState = false
+	
+	
+	// MARK: - Initialisation
 	
 	init(apiService: UsersAPIService, tableView: UITableView) {
 		self.apiService = apiService
@@ -30,8 +34,27 @@ class StackUsersDataSource: NSObject, UsersDataSource {
 	}
 	
 	
+	// MARK: - Load Users
+	
 	func loadUsers(maxCount: Int, completion: (() -> Void)? = nil) {
-		
+		apiService.fetchUsers(maxCount: maxCount) { [unowned self] (users, error) in
+			guard error == nil else {
+				self.isInErrorState = true
+				self.reloadTableView()
+				completion?()
+				return
+			}
+			
+			self.users = users ?? []
+			self.reloadTableView()
+			completion?()
+		}
+	}
+	
+	private func reloadTableView() {
+		DispatchQueue.main.async {
+			self.tableView?.reloadData()
+		}
 	}
 }
 
@@ -44,10 +67,17 @@ extension StackUsersDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return users.count
+		return isInErrorState ? 1 : users.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		return UITableViewCell()
+		if isInErrorState {
+			return tableView.dequeueReusableCell(withIdentifier: "error_cell")!
+		} else {
+			let cell = tableView.dequeueReusableCell(withIdentifier: "user_cell", for: indexPath)
+			let user = users[indexPath.row]
+			// Config cell with user 
+			return cell
+		}
 	}
 }
