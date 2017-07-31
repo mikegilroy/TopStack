@@ -21,8 +21,8 @@ class StackUsersDataSource: NSObject, UsersDataSource {
 	let apiService: UsersAPIService
 	weak var tableView: UITableView?
 	
-	var users: [User] = []
-	var isInErrorState = false
+	private(set) var users: [User] = []
+	private(set) var isInErrorState = false
 	
 	
 	// MARK: - Initialisation

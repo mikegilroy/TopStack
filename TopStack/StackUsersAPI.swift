@@ -45,7 +45,6 @@ class StackUsersAPI: UsersAPIService {
 				return
 			}
 			
-			
 			if let json = self.parser.dictionary(from: data),
 				let userResult = StackUsersResult(json: json) {
 				completion(userResult.items, nil)
