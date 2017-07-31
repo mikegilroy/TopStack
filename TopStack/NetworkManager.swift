@@ -7,24 +7,24 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol NetworkHandler {
-	func getData(url: URL?, completion: @escaping (Data?, Error?) -> Void)
+	func getData(url: URL?, completion: @escaping (Any?, Error?) -> Void)
 }
 
 struct NetworkManager: NetworkHandler {
 	
-	func getData(url: URL?, completion: @escaping (Data?, Error?) -> Void) {
-		let config = URLSessionConfiguration.default
-		let session = URLSession(configuration: config)
+	func getData(url: URL?, completion: @escaping (Any?, Error?) -> Void) {
 		
 		guard let url = url else {
 			completion(nil, nil)
 			return
 		}
+		let urlRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 20.0)
 		
-		session.dataTask(with: url) { (data, response, error) in
-			completion(data, error)
-			}.resume()
+		Alamofire.request(urlRequest).responseJSON { (response) in
+			completion(response.data, response.error)
+		}
 	}
 }
