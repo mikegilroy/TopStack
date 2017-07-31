@@ -20,6 +20,7 @@ protocol ImageLoader {
 
 struct NetworkManager: HTTPHandler, ImageLoader {
 	
+	/// GET data from given URL. No cache is used by default.
 	func getData(url: URL?, completion: @escaping (Any?, Error?) -> Void) {
 		
 		guard let url = url else {
@@ -33,6 +34,7 @@ struct NetworkManager: HTTPHandler, ImageLoader {
 		}
 	}
 	
+	/// GET image data from given URL and return as optional UIImage. A cache is used by default.
 	func getImage(url: URL?, completion: @escaping (UIImage?) -> Void) {
 		
 		guard let url = url else {

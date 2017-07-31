@@ -16,13 +16,18 @@ protocol User: JSONInitialisable {
 
 class StackUser: User {
 	
+	// MARK: - Keys
 	private let kDisplayName = "display_name"
 	private let kReputation = "reputation"
 	private let kProfileImage = "profile_image"
 	
+	// MARK: - Properties
 	let displayName: String
 	let reputation: Int
 	let profileImageURL: String
+	
+	
+	// MARK: - Initialisation
 	
 	required init?(json: [String : Any]) {
 		guard let displayName = json[kDisplayName] as? String,

@@ -14,8 +14,10 @@ protocol UsersResult: JSONInitialisable {
 
 struct StackUsersResult: UsersResult {
 
+	// MARK: - Keys
 	private let kItems = "items"
 	
+	// MARK: - Properties
 	let items: [User]
 	
 	

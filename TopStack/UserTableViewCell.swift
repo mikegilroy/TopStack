@@ -24,7 +24,6 @@ class UserTableViewCell: UITableViewCell {
 		
 		userImageView.layer.cornerRadius = userImageView.frame.size.height / 2
     }
-
 	
 	func configure(with user: User) {
 		userNameLabel.text = user.displayName
