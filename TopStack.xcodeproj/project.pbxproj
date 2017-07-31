@@ -12,7 +12,6 @@
 		109258BF1F2F3405003B9B7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 109258BE1F2F3405003B9B7B /* Assets.xcassets */; };
 		109258C21F2F3405003B9B7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 109258C01F2F3405003B9B7B /* LaunchScreen.storyboard */; };
 		109258CD1F2F3405003B9B7B /* TopStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258CC1F2F3405003B9B7B /* TopStackTests.swift */; };
-		109258DA1F2F34EF003B9B7B /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258D91F2F34EF003B9B7B /* UsersListViewController.swift */; };
 		109258DC1F2F3728003B9B7B /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258DB1F2F3728003B9B7B /* UserTableViewCell.swift */; };
 		109258E11F2F390A003B9B7B /* StackUsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258E01F2F390A003B9B7B /* StackUsersAPI.swift */; };
 		109258E41F2F391C003B9B7B /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258E31F2F391C003B9B7B /* JSONParser.swift */; };
@@ -20,6 +19,7 @@
 		109258E91F2F395E003B9B7B /* StackUsersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258E81F2F395E003B9B7B /* StackUsersDataSource.swift */; };
 		109258EB1F2F41CB003B9B7B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258EA1F2F41CB003B9B7B /* NetworkManager.swift */; };
 		109258EE1F2F44BD003B9B7B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 109258ED1F2F44BD003B9B7B /* Podfile */; };
+		109258F01F2F4744003B9B7B /* UsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109258EF1F2F4744003B9B7B /* UsersListViewController.swift */; };
 		D651B95AAEE358A303148DD5 /* Pods_TopStack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B48450689583D3EAE6DE2AEC /* Pods_TopStack.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +43,6 @@
 		109258C81F2F3405003B9B7B /* TopStackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopStackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		109258CC1F2F3405003B9B7B /* TopStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStackTests.swift; sourceTree = "<group>"; };
 		109258CE1F2F3405003B9B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		109258D91F2F34EF003B9B7B /* UsersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsersListViewController.swift; path = ../UsersListViewController.swift; sourceTree = "<group>"; };
 		109258DB1F2F3728003B9B7B /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		109258E01F2F390A003B9B7B /* StackUsersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackUsersAPI.swift; sourceTree = "<group>"; };
 		109258E31F2F391C003B9B7B /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		109258E81F2F395E003B9B7B /* StackUsersDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackUsersDataSource.swift; sourceTree = "<group>"; };
 		109258EA1F2F41CB003B9B7B /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		109258ED1F2F44BD003B9B7B /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Podfile; sourceTree = "<group>"; };
+		109258EF1F2F4744003B9B7B /* UsersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersListViewController.swift; sourceTree = "<group>"; };
 		3F91EC1703846956F4C821C5 /* Pods-TopStack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopStack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopStack/Pods-TopStack.debug.xcconfig"; sourceTree = "<group>"; };
 		B48450689583D3EAE6DE2AEC /* Pods_TopStack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopStack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E55B32917A93D90AAF080582 /* Pods-TopStack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopStack.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopStack/Pods-TopStack.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		109258DD1F2F3804003B9B7B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				109258D91F2F34EF003B9B7B /* UsersListViewController.swift */,
+				109258EF1F2F4744003B9B7B /* UsersListViewController.swift */,
 				109258DB1F2F3728003B9B7B /* UserTableViewCell.swift */,
 			);
 			name = Views;
@@ -335,7 +335,7 @@
 				109258B81F2F3405003B9B7B /* AppDelegate.swift in Sources */,
 				109258DC1F2F3728003B9B7B /* UserTableViewCell.swift in Sources */,
 				109258EB1F2F41CB003B9B7B /* NetworkManager.swift in Sources */,
-				109258DA1F2F34EF003B9B7B /* UsersListViewController.swift in Sources */,
+				109258F01F2F4744003B9B7B /* UsersListViewController.swift in Sources */,
 				109258E91F2F395E003B9B7B /* StackUsersDataSource.swift in Sources */,
 				109258E61F2F3938003B9B7B /* StackUser.swift in Sources */,
 			);
@@ -549,6 +549,7 @@
 				109258D31F2F3405003B9B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		109258D41F2F3405003B9B7B /* Build configuration list for PBXNativeTarget "TopStackTests" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +558,7 @@
 				109258D61F2F3405003B9B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
